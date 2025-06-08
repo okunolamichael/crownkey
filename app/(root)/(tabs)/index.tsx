@@ -11,7 +11,7 @@ export default function Index() {
       }}
     >
 
-      
+      <Text className="font-bold text-lg my-10">Welcome to crownkey real esate company</Text>
       <Link href="/signIn">
         <Text style={{ fontSize: 20, marginBottom: 20 }}>Sign In</Text>
       </Link>
