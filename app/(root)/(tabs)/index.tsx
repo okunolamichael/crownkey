@@ -11,18 +11,18 @@ export default function Index() {
       }}
     >
 
-      <Text className="font-bold text-lg my-10">Welcome to crownkey real esate company</Text>
+      <Text className="font-bold my-10 font-rubik text-2xl">Welcome to Crownkey Real Esate</Text>
       <Link href="/signIn">
-        <Text style={{ fontSize: 20, marginBottom: 20 }}>Sign In</Text>
+        <Text>Sign In</Text>
       </Link>
       <Link href="/explore">
-        <Text style={{ fontSize: 20, marginBottom: 20 }}>Explore</Text>
+        <Text>Explore</Text>
       </Link>
       <Link href="/profile">
-        <Text style={{ fontSize: 20, marginBottom: 20 }}>Profile</Text>
+        <Text>Profile</Text>
       </Link>
       <Link href="/properties/1">
-        <Text style={{ fontSize: 20, marginBottom: 20 }}>Property</Text>
+        <Text>Property</Text>
       </Link>
     </View>
   );
