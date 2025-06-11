@@ -26,5 +26,5 @@ if(!fontsLoaded) return null;
 //else, return the main Stack component
 
 
-  return <Stack />;
+  return <Stack screenOptions={{headerShown: false}} />;
 }
