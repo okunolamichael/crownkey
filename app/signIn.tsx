@@ -1,14 +1,36 @@
-import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native'
+import { View, Text, ScrollView, Image, TouchableOpacity, Alert } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import images from '@/constants/images'
 import icons from '@/constants/icons'
+import { login } from '@/app/lib/appwrite'
+import { useGlobalContext } from '@/app/lib/global-provider'
+import { Redirect } from 'expo-router'
 
 
 
-const signIn = () => {
 
-const handleLogin = () => {}
+const SignIn = () => {
+
+  const {refetch, loading, isLoggedIn} = useGlobalContext();
+
+  if(!loading && isLoggedIn) return <Redirect href="/"/>;
+
+  const handleLogin = async () => {
+    const result = await login();
+
+    if (result) {
+      refetch();
+      
+      // You can now navigate to the home screen or wherever you want after successful login
+      // Navigate to the home screen or wherever you want after successful login
+      // For example, using Expo Router:
+      // navigation.navigate('home');
+    } else {
+      // Handle login failure (e.g., show an error message)
+      Alert.alert("Login failed", "Please try again.");
+    }
+  }
 
   return (
     <SafeAreaView className='bg-white h-full'>
@@ -43,4 +65,4 @@ const handleLogin = () => {}
   )
 }
 
-export default signIn
+export default SignIn
