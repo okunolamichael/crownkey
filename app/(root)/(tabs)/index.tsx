@@ -12,18 +12,6 @@ export default function Index() {
     >
 
       <Text className="font-bold my-10 font-rubik text-2xl">Welcome to Crownkey Real Esate</Text>
-      <Link href="/signIn">
-        <Text>Sign In</Text>
-      </Link>
-      <Link href="/explore">
-        <Text>Explore</Text>
-      </Link>
-      <Link href="/profile">
-        <Text>Profile</Text>
-      </Link>
-      <Link href="/properties/1">
-        <Text>Property</Text>
-      </Link>
     </View>
   );
 }
