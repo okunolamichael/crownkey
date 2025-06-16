@@ -2,7 +2,7 @@ import { useGlobalContext } from "@/app/lib/global-provider";
 import icons from "@/constants/icons";
 import images from "@/constants/images";
 import { Link } from "expo-router";
-import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
+import { Button, FlatList, Image, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Search from "@/components/Search";
 import { FeaturedCard, Card } from "@/components/Cards";
