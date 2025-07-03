@@ -1,4 +1,4 @@
-import { useGlobalContext } from "@/app/lib/global-provider";
+import { useGlobalContext } from "@/lib/global-provider";
 import icons from "@/constants/icons";
 import images from "@/constants/images";
 import { Link, router, useLocalSearchParams } from "expo-router";
@@ -15,8 +15,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Search from "@/components/Search";
 import { FeaturedCard, Card } from "@/components/Cards";
 import Filters from "@/components/Filters";
-import { useAppwrite } from "@/app/lib/useAppwrite";
-import { getLatestProperties, getProperties } from "@/app/lib/appwrite";
+import { useAppwrite } from "@/lib/useAppwrite";
+import { getLatestProperties, getProperties } from "@/lib/appwrite";
 import { useEffect } from "react";
 import NoResults from "@/components/NoResults";
 

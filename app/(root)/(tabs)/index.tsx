@@ -1,4 +1,4 @@
-import { useGlobalContext } from "@/app/lib/global-provider";
+import { useGlobalContext } from "@/lib/global-provider";
 import icons from "@/constants/icons";
 import images from "@/constants/images";
 import { Link, router, useLocalSearchParams } from "expo-router";
@@ -15,10 +15,17 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Search from "@/components/Search";
 import { FeaturedCard, Card } from "@/components/Cards";
 import Filters from "@/components/Filters";
-import { useAppwrite } from "@/app/lib/useAppwrite";
-import { getLatestProperties, getProperties } from "@/app/lib/appwrite";
+import { useAppwrite } from "@/lib/useAppwrite";
+import { getLatestProperties, getProperties } from "@/lib/appwrite";
 import { useEffect } from "react";
 import NoResults from "@/components/NoResults";
+
+
+// What's going to happen --
+// FlatList shows a grid of property cards (from Cards.tsx).
+// useAppwrite fetches properties from the backend.
+// Tapping a card navigates to a details page (router.push).
+
 
 export default function Index() {
   const { user } = useGlobalContext();
@@ -63,6 +70,19 @@ export default function Index() {
         element above the main list items (i.e., above the cards rendered by renderItem).
         Inside your ListHeaderComponent, you placed the "Featured" section, 
         which itself contains another FlatList for featured cards. 
+       */}
+
+
+       {/*
+        <ScrollView> vs <FlatList> - which one to use?
+        ScrollView renders all its react child components at once, but this has a performance downside.
+
+        Imagine you have a very long list of items you want to display, maybe several screens worth of content.
+        Creating JS components and native views for everything all at once, much of which may not even be shown, 
+        will contribute to slow rendering and increased memory usage.
+
+        This is where FlatList comes into play. FlatList renders items lazily, when they are about to appear, 
+        and removes items that scroll way off screen to save memory and processing time.
        */}
       <FlatList
         data={properties}
