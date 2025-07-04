@@ -83,7 +83,7 @@ const SignIn = () => {
             <Text>
               Already have an account? {""}
             </Text>
-            <Pressable className='items-center'><Link href={"/signingin"} className='text-primary-300'>Sign In</Link></Pressable>
+            <Pressable className='items-center'><Link href={"/Signingin"} className='text-primary-300'>Sign In</Link></Pressable>
             </View>
         </View>
       </ScrollView>
