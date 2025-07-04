@@ -33,6 +33,8 @@ import location from "@/assets/icons/location.png";
 import edit from "@/assets/icons/edit.png";
 import facebook from "@/assets/icons/facebook.png"
 import twitter from "@/assets/icons/twitter.png";
+import hide from "@/assets/icons/hide.png";
+import view from "@/assets/icons/view.png"
 
 export default {
   google,
@@ -70,4 +72,6 @@ export default {
   edit,
   facebook,
   twitter,
+  hide,
+  view,
 };
